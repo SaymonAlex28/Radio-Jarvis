@@ -8,8 +8,8 @@
 <meta content="JARVIS RADIO — твои радиостанции в одном плеере" name="description"/>
 <link href="./manifest.webmanifest" rel="manifest"/>
 <link href="./icons/icon-192.png" rel="icon"/>
-<link href="./icons/icon-192.png" rel="apple-touch-icon"/>
-<link href="./style.css" rel="stylesheet"/>
+<link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="./style.css?v=3.7" rel="stylesheet"/>
 <title>JARVIS RADIO</title>
 </head>
 <body>
@@ -79,6 +79,6 @@
 <dialog id="stationDialog"><form class="modal" id="stationForm"><div class="modal-head"><div><span class="eyebrow" data-i18n="manage">MANAGE LIBRARY</span><h2 data-i18n="add" id="dialogTitle">Добавить станцию</h2></div><button aria-label="Закрыть" class="icon-btn" data-i18n-aria="close" id="closeDialog" type="button"><svg><use href="#i-close"></use></svg></button></div><label><span data-i18n="name">Название станции</span><input data-i18n-placeholder="name_placeholder" id="stationName" maxlength="90" placeholder="Название радиостанции" required=""/></label><label><span data-i18n="url">Прямая ссылка на аудиопоток</span><input id="stationUrl" placeholder="https://.../stream.mp3" required="" type="url"/></label><label><span data-i18n="description">Жанр / описание</span><input id="stationGenre" maxlength="80" placeholder="Chillout / Lounge"/></label><label><span data-i18n="logo">Ссылка на логотип (необязательно)</span><input id="stationLogo" placeholder="https://.../logo.png" type="url"/></label><label><span data-i18n="backup">Запасной поток (необязательно)</span><input id="stationBackup" placeholder="https://.../backup.mp3" type="url"/></label><div class="modal-hint">Нужна ссылка именно на аудиопоток, а не на сайт радиостанции. Некоторые станции могут не разрешать воспроизведение в браузере.</div><div class="modal-actions"><button class="outline-btn" data-i18n="cancel" id="cancelDialog" type="button">Отмена</button><button class="primary-btn" data-i18n="save" type="submit">Сохранить</button></div></form></dialog>
 <div aria-live="polite" id="toast" role="status"></div>
 <audio id="radioAudio" preload="none"></audio>
-<script defer="" src="./app.js"></script>
+<script defer="" src="./app.js?v=3.7"></script>
 </body>
 </html>

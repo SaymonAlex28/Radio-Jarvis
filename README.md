@@ -1,5 +1,5 @@
-JARVIS RADIO v3.5 Compact Player
+JARVIS RADIO v3.7 — Compact Mobile Fix
 
-Track information and listening timer are now inside the original player card alongside volume. No separate tall track panel. Six languages, stations, logo, search, playback and the 4px plus correction remain unchanged.
+Changes: track details now a tiny single-line strip below volume, preserving player and metadata logic. Versioned CSS/JS URLs and new service worker cache reduce mismatched old scripts on Samsung PWA. All stations, languages, controls and icons preserved.
 
-Replace the complete project files on the same site. Do not clear site data. Update the page or restart the PWA to refresh the service worker.
+Install: replace ALL files from this archive on GitHub Pages, not only CSS. Refresh or close/reopen PWA. If old layout persists, use Chrome site settings to clear cached files ONLY if needed; beware clearing site data removes saved stations.

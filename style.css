@@ -79,3 +79,31 @@
   .compact-player .listening-time{font-size:8px}
   .compact-player .listening-time strong{font-size:11px}
 }
+
+/* v3.7 — MOBILE PLAYER: one neat metadata strip, no bulky extra panel */
+.compact-player .player-bottom{display:flex;flex-direction:column;align-items:stretch;gap:6px}
+.compact-player .volume-group{width:100%;min-width:0;display:flex;align-items:center;gap:9px;padding:0;margin:0;border:0}
+.compact-player .volume-group input{flex:1;width:0;min-width:0}
+.compact-player .track-panel{width:100%;min-width:0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 9px;align-items:center;box-sizing:border-box;background:transparent;border:0;border-top:1px solid #26364d;border-radius:0;padding:7px 0 0;margin:0}
+.compact-player .track-top{grid-column:1;grid-row:1;min-width:0;display:block}
+.compact-player .track-copy{min-width:0}
+.compact-player .track-eyebrow,.compact-player .track-live{display:none!important}
+.compact-player .track-title{font-size:11px;line-height:1.4;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#c7dced}
+.compact-player .track-artist{font-size:10px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.compact-player .track-meter{grid-column:1;grid-row:2;height:2px;margin:3px 0;background:#283b51}
+.compact-player .track-times{grid-column:1;grid-row:3;font-size:9px;display:flex;justify-content:space-between;gap:8px;color:#819ab6}
+.compact-player .listening-time{grid-column:2;grid-row:1 / 4;display:flex;align-items:flex-end;justify-content:center;flex-direction:column;gap:1px;white-space:nowrap;margin:0;padding:0;border:0;letter-spacing:0;font-size:9px;color:#90afc8}
+.compact-player .listening-time strong{font-size:12px;color:#77d3fd;letter-spacing:0}
+@media(max-width:760px){
+.compact-player{padding:12px 14px;margin:14px 0 22px;min-height:0}
+.compact-player .player-main{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;min-height:54px}
+.compact-player .player-buttons{flex-shrink:0;gap:10px}
+.compact-player .player-mid{min-width:0;flex:1;gap:8px;justify-content:flex-end}
+.compact-player .audio-bars{flex-shrink:0}
+.compact-player #playerStatus{font-size:9px;line-height:1.3;overflow-wrap:anywhere}
+.compact-player .player-bottom{padding-top:9px;margin-top:8px;gap:7px}
+.compact-player .track-panel{padding-top:7px}
+.compact-player .track-title{font-size:11px}
+.compact-player .listening-time strong{font-size:11px}
+}
+@media(max-width:430px){.compact-player .player-mid #playerStatus{display:none}.compact-player .track-panel{grid-template-columns:minmax(0,1fr) auto}}
