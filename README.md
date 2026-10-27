@@ -1,1 +1,5 @@
-JARVIS RADIO v3.3 — three new countries in Radio Directory: Russia (RU), Croatia (HR), Bulgaria (BG). Country names translated across all six interface languages. All existing functions untouched. Includes latest user CSS fixes for station logo and plus icon. Upload all project files, not only HTML, to refresh PWA cache.
+JARVIS RADIO v3.5 Compact Player
+
+Track information and listening timer are now inside the original player card alongside volume. No separate tall track panel. Six languages, stations, logo, search, playback and the 4px plus correction remain unchanged.
+
+Replace the complete project files on the same site. Do not clear site data. Update the page or restart the PWA to refresh the service worker.
