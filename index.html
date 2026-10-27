@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#080e19" name="theme-color"/>
+<meta content="JARVIS RADIO — твои радиостанции в одном плеере" name="description"/>
+<link href="./manifest.webmanifest" rel="manifest"/>
+<link href="./icons/icon-192.png" rel="icon"/>
+<link href="./icons/icon-192.png" rel="apple-touch-icon"/>
+<link href="./style.css" rel="stylesheet"/>
+<title>JARVIS RADIO</title>
+</head>
+<body>
+<svg aria-hidden="true" class="svg-defs" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-radio" viewbox="0 0 24 24"><path d="M4 10 19 3M5 10h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Zm3 5h.01M12 15h.01M16 15h.01M7 18h10"></path></symbol>
+<symbol id="i-play" viewbox="0 0 24 24"><path d="m8 5 12 7-12 7z"></path></symbol>
+<symbol id="i-pause" viewbox="0 0 24 24"><path d="M8 5v14M16 5v14"></path></symbol>
+<symbol id="i-prev" viewbox="0 0 24 24"><path d="M5 5v14M19 5 7 12l12 7z"></path></symbol>
+<symbol id="i-next" viewbox="0 0 24 24"><path d="M19 5v14M5 5l12 7-12 7z"></path></symbol>
+<symbol id="i-heart" viewbox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"></path></symbol>
+<symbol id="i-plus" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></symbol>
+<symbol id="i-search" viewbox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7"></circle><path d="m16 16 5 5"></path></symbol>
+<symbol id="i-volume" viewbox="0 0 24 24"><path d="m11 5-5 4H3v6h3l5 4zM15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"></path></symbol>
+<symbol id="i-mute" viewbox="0 0 24 24"><path d="m11 5-5 4H3v6h3l5 4zM16 9l5 6m0-6-5 6"></path></symbol>
+<symbol id="i-trash" viewbox="0 0 24 24"><path d="M4 7h16M10 4h4M6 7l1 14h10l1-14M10 11v6M14 11v6"></path></symbol>
+<symbol id="i-close" viewbox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"></path></symbol>
+<symbol id="i-refresh" viewbox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M6 9a7 7 0 0 1 12-2l2 5M4 12l2 5a7 7 0 0 0 12-2"></path></symbol>
+<symbol id="i-external" viewbox="0 0 24 24"><path d="M13 5h6v6M19 5l-9 9M19 14v5H5V5h8"></path></symbol>
+<symbol id="i-edit" viewbox="0 0 24 24"><path d="M4 20h5l11-11-5-5L4 15zM13 6l5 5"></path></symbol>
+</svg>
+<div class="app-shell">
+<aside class="sidebar">
+<div class="logo"><div class="logo-mark"><svg><use href="#i-radio"></use></svg></div><div><strong>JARVIS<span> RADIO</span></strong><small data-i18n="brand_caption">YOUR SOUND SYSTEM</small></div></div>
+<div class="side-heading" data-i18n="library">БИБЛИОТЕКА</div>
+<nav aria-label="Разделы" data-i18n-aria="library" id="nav">
+<button class="nav-link active" data-tab="all">◉ <span data-i18n="my">Мои станции</span><b id="stationCount">0</b></button>
+<button class="nav-link" data-tab="favorite">♡ <span data-i18n="favorites">Избранное</span></button>
+<button class="nav-link" data-tab="featured">✦ <span data-i18n="featured">Подборки</span></button>
+<button class="nav-link" data-tab="directory">⌕ <span data-i18n="directory">Каталог радио</span></button>
+</nav>
+<div class="side-bottom"><div class="connected"><span class="connected-dot"></span><span data-i18n="online" id="networkLabel">ОНЛАЙН</span></div><p data-i18n="motto">ТВОЯ МУЗЫКА. ТВОИ ПРАВИЛА.</p><small>JARVIS RADIO · v3.0</small></div>
+</aside>
+<main class="content">
+<header class="topbar"><div class="mobile-brand">JARVIS <span>RADIO</span></div><span class="header-tag"><span class="pulse-dot"></span><span data-i18n="internet_radio">INTERNET RADIO</span></span><label class="language-picker"><span data-i18n="lang">Язык</span><select aria-label="Language / Язык" id="languageSelect"><option value="ru">🇷🇺 Русский</option><option value="en">🇬🇧 English</option><option value="hr">🇭🇷 Hrvatski</option><option value="bg">🇧🇬 Български</option><option value="ro">🇷🇴 Română</option><option value="uk">🇺🇦 Українська</option></select></label><button aria-label="Добавить станцию" class="icon-btn add-top" data-i18n-aria="add" data-i18n-title="add" id="addTop" title="Добавить станцию"><svg><use href="#i-plus"></use></svg></button></header>
+<section class="hero">
+<div class="hero-info"><span class="eyebrow" data-i18n="nowplaying">◈ NOW PLAYING</span><h1 id="currentTitle">Groove Salad</h1><p id="currentGenre">Ambient · Downtempo · SomaFM</p><div class="status-line"><span class="live-pill"><i></i><span data-i18n="live_stream">LIVE STREAM</span></span><span id="qualityLabel">MP3 · INTERNET RADIO</span></div></div>
+<div class="hero-art" id="heroArt"><div class="art-orb"><div class="orb-core"><svg id="orbFallback"><use href="#i-radio"></use></svg><img id="orbLogo" alt="" decoding="async" hidden></div></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div></div>
+</section>
+<section aria-label="Плеер" class="player" data-i18n-aria="player_area">
+<div class="player-buttons"><button aria-label="Предыдущая станция" class="transport" data-i18n-aria="prev" data-i18n-title="previous" id="prevBtn" title="Предыдущая"><svg><use href="#i-prev"></use></svg></button><button aria-label="Воспроизвести" class="play-btn" data-i18n-aria="play" data-i18n-title="play" id="playBtn" title="Воспроизвести"><svg><use href="#i-play" id="playIcon"></use></svg></button><button aria-label="Следующая станция" class="transport" data-i18n-aria="next" data-i18n-title="following" id="nextBtn" title="Следующая"><svg><use href="#i-next"></use></svg></button></div>
+<div class="player-mid"><div aria-hidden="true" class="audio-bars" id="audioBars"></div><span data-i18n="ready" id="playerStatus">ГОТОВ К ВОСПРОИЗВЕДЕНИЮ</span></div>
+<div class="volume-group"><button aria-label="Выключить звук" class="icon-btn" data-i18n-aria="mute" id="muteBtn"><svg><use href="#i-volume" id="volumeIcon"></use></svg></button><input aria-label="Громкость" data-i18n-aria="volume" id="volume" max="100" min="0" type="range" value="65"/><span id="volumeValue">65%</span></div>
+</section>
+<section class="library">
+<div class="section-head"><div><span class="eyebrow" data-i18n="collection" id="sectionEyebrow">YOUR COLLECTION</span><h2 id="sectionTitle">Мои станции <span id="listCount"></span></h2></div><button class="outline-btn" id="addBtn"><svg><use href="#i-plus"></use></svg><span data-i18n="add">Добавить станцию</span></button></div>
+<div class="filter-row" hidden="" id="featuredFilters"><button class="chip active" data-feature="all" data-i18n="allfeatured">Все подборки</button><button class="chip" data-feature="ua" data-i18n="ukraine">🇺🇦 Украина</button><button class="chip" data-feature="retro" data-i18n="retro">📻 Ретро</button><button class="chip" data-feature="world" data-i18n="world">🌍 Зарубежные</button><button class="chip" data-feature="chill" data-i18n="lounge">🌙 Lounge</button></div>
+<div class="filter-row" hidden="" id="directoryFilters"><label><span data-i18n="country">Страна</span><select id="countryFilter"><option data-i18n="allworld" value="">Весь мир</option><option data-i18n="ukraine" value="UA">Украина</option><option value="GB">🇬🇧 Великобритания</option><option value="US">🇺🇸 США</option><option value="DE">🇩🇪 Германия</option><option value="PL">🇵🇱 Польша</option><option value="RO">🇷🇴 Румыния</option><option data-i18n="russia" value="RU">🇷🇺 Россия</option><option data-i18n="croatia" value="HR">🇭🇷 Хорватия</option><option data-i18n="bulgaria" value="BG">🇧🇬 Болгария</option></select></label><label><span data-i18n="genre">Музыка</span><select id="genreFilter"><option data-i18n="allgenres" value="">Все жанры</option><option value="70s">70-е</option><option value="80s">80-е</option><option value="90s">90-е</option><option value="00s">2000-е</option><option value="oldies">Oldies</option><option value="retro">Retro</option><option value="pop">Pop</option><option value="rock">Rock</option><option value="dance">Dance</option><option value="disco">Disco</option><option value="chillout">Chillout</option><option value="lounge">Lounge</option></select></label><label class="https-check"><input checked="" id="httpsOnly" type="checkbox"/><span data-i18n="https">Только HTTPS</span></label></div>
+<div class="toolbar"><label class="search-box"><svg><use href="#i-search"></use></svg><input autocomplete="off" data-i18n-placeholder="search" id="searchInput" placeholder="Поиск радиостанции..." type="search"/></label><button aria-label="Обновить поиск" class="icon-btn reload" data-i18n-aria="reload" data-i18n-title="reload" id="reloadBtn" title="Обновить поиск"><svg><use href="#i-refresh"></use></svg></button></div>
+<div aria-live="polite" class="station-list" id="stationList"></div>
+<div class="empty-state" hidden="" id="emptyState"></div>
+<div class="load-more" hidden="" id="loadMoreWrap"><button class="outline-btn" data-i18n="more" id="loadMoreBtn">Показать ещё</button></div>
+</section>
+<footer><span data-i18n="footerline">JARVIS RADIO</span><span>•</span><span data-i18n="footerline">BUILT FOR THE MUSIC</span></footer>
+</main>
+</div>
+<div class="mobile-nav"><button class="mobile-tab active" data-tab="all">◉<span data-i18n="stations_short">Станции</span></button><button class="mobile-tab" data-tab="favorite">♡<span data-i18n="favorites">Избранное</span></button><button class="mobile-tab" data-tab="featured">✦<span data-i18n="featured">Подборки</span></button><button class="mobile-tab" data-tab="directory">⌕<span data-i18n="directory_short">Каталог</span></button></div>
+<dialog id="stationDialog"><form class="modal" id="stationForm"><div class="modal-head"><div><span class="eyebrow" data-i18n="manage">MANAGE LIBRARY</span><h2 data-i18n="add" id="dialogTitle">Добавить станцию</h2></div><button aria-label="Закрыть" class="icon-btn" data-i18n-aria="close" id="closeDialog" type="button"><svg><use href="#i-close"></use></svg></button></div><label><span data-i18n="name">Название станции</span><input data-i18n-placeholder="name_placeholder" id="stationName" maxlength="90" placeholder="Название радиостанции" required=""/></label><label><span data-i18n="url">Прямая ссылка на аудиопоток</span><input id="stationUrl" placeholder="https://.../stream.mp3" required="" type="url"/></label><label><span data-i18n="description">Жанр / описание</span><input id="stationGenre" maxlength="80" placeholder="Chillout / Lounge"/></label><label><span data-i18n="logo">Ссылка на логотип (необязательно)</span><input id="stationLogo" placeholder="https://.../logo.png" type="url"/></label><label><span data-i18n="backup">Запасной поток (необязательно)</span><input id="stationBackup" placeholder="https://.../backup.mp3" type="url"/></label><div class="modal-hint">Нужна ссылка именно на аудиопоток, а не на сайт радиостанции. Некоторые станции могут не разрешать воспроизведение в браузере.</div><div class="modal-actions"><button class="outline-btn" data-i18n="cancel" id="cancelDialog" type="button">Отмена</button><button class="primary-btn" data-i18n="save" type="submit">Сохранить</button></div></form></dialog>
+<div aria-live="polite" id="toast" role="status"></div>
+<audio id="radioAudio" preload="none"></audio>
+<script defer="" src="./app.js"></script>
+</body>
+</html>
