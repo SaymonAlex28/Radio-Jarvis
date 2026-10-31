@@ -1,5 +1,5 @@
-JARVIS RADIO v3.7 — Compact Mobile Fix
+JARVIS RADIO — Polski language update
 
-Changes: track details now a tiny single-line strip below volume, preserving player and metadata logic. Versioned CSS/JS URLs and new service worker cache reduce mismatched old scripts on Samsung PWA. All stations, languages, controls and icons preserved.
+Only two app files changed: index.html (Polski option) and app.js (107 Polish strings). sw.js cache version updated, if applicable. All other resources are byte-identical to v3.7.
 
-Install: replace ALL files from this archive on GitHub Pages, not only CSS. Refresh or close/reopen PWA. If old layout persists, use Chrome site settings to clear cached files ONLY if needed; beware clearing site data removes saved stations.
+Upload updated index.html, app.js, sw.js to the same site. Your stations and favorites remain in localStorage.
